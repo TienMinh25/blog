@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect src/index.js"
+    "start": "nodemon --inspect src/index.js",
+    "watch": "sass --watch src/resources/scss/ src/public/css/"
   },
   "author": "",
   "license": "ISC",
@@ -14,7 +15,8 @@
     "express-handlebars": "^7.0.7"
   },
   "devDependencies": {
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.22"
+    "morgan": "^1.10.0", 
+    "nodemon": "^2.0.22",
+    "sass": "^1.62.1"
   }
 }
