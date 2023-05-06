@@ -12,10 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.7"
+    "express-handlebars": "^7.0.7",
+    "mongoose": "^7.1.0"
   },
   "devDependencies": {
-    "morgan": "^1.10.0", 
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.22",
     "sass": "^1.62.1"
   }

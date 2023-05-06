@@ -6,7 +6,10 @@ const app = express();
 const port = 3000;
 
 const route = require('./routes/index.js');
+const db = require('./config/db');
 
+// Connect to DB
+db.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
 console.log(path.join(__dirname, 'public'));
@@ -24,12 +27,12 @@ app.engine('hbs', engine({ // config for handlebars
     extname: '.hbs'
 }));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'resources/views'));
+app.set('views', path.join(__dirname, 'resources', 'views'));
 
 // Routes init
 route(app);
 
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(port, () => console.log(`App listening at http://localhost:${port}`));
  
 // thang query parameter se cham query (cua method get)
 // thang form data se cham body ( cua method post )
